@@ -12,7 +12,7 @@ importers:
         specifier: ^0.0.80
         version: 0.0.80(@types/react@19.2.18)(react@19.2.8)
       cn:
-        specifier: ^0.2.4
+        specifier: ^0.2.5
         version: 0.2.5
       fumadocs-core:
         specifier: 16.15.6
@@ -24,7 +24,7 @@ importers:
         specifier: npm:@fumadocs/base-ui@16.15.6
         version: '@fumadocs/base-ui@16.15.6(@types/mdx@2.0.14)(@types/react@19.2.18)(fumadocs-core@16.15.6(@mdx-js/mdx@3.1.1)(@types/estree-jsx@1.0.5)(@types/hast@3.0.5)(@types/mdast@4.0.4)(@types/react@19.2.18)(lucide-react@1.40.0(react@19.2.8))(next@16.3.4(@types/node@26.4.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(zod@4.5.4))(next@16.3.4(@types/node@26.4.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tailwindcss@4.3.3)'
       lucide-react:
-        specifier: ^1.39.0
+        specifier: ^1.40.0
         version: 1.40.0(react@19.2.8)
       next:
         specifier: 16.3.4
@@ -52,10 +52,10 @@ importers:
         specifier: ^19.2.18
         version: 19.2.18
       '@types/react-dom':
-        specifier: ^19.2.5
+        specifier: ^19.2.7
         version: 19.2.7(@types/react@19.2.18)
       postcss:
-        specifier: ^8.5.26
+        specifier: ^8.5.28
         version: 8.5.28
       tailwindcss:
         specifier: ^4.3.3
