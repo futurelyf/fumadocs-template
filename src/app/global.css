@@ -2,6 +2,24 @@
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
 
+:root {
+  --sec-1-color: hsl(26, 73%, 51%);
+  --sec-2-color: hsl(217, 100%, 58%);
+}
+
+.dark {
+  --sec-1-color: #fff383;
+  --sec-2-color: #a9ceff;
+}
+
+.sec-1 {
+  --color-fd-primary: var(--sec-1-color);
+}
+
+.sec-2 {
+  --color-fd-primary: var(--sec-2-color);
+}
+
 html {
   scrollbar-gutter: stable;
 }
