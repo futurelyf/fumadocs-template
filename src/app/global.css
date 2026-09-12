@@ -2,6 +2,34 @@
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
 
+:root {
+  --sec-1-color: hsl(26, 73%, 51%);
+  --sec-2-color: hsl(217, 100%, 58%);
+  --banner-text-color-up: #59592a;
+  --banner-text-color-down: #a8a866;
+  --blog-color: hsl(25, 55%, 35%);
+}
+
+.dark {
+  --sec-1-color: #fff383;
+  --sec-2-color: #a9ceff;
+  --banner-text-color-up: #e4e2d0;
+  --banner-text-color-down: #b7af7e;
+  --blog-color: #d9b38c;
+}
+
+.sec-1 {
+  --color-fd-primary: var(--sec-1-color);
+}
+
+.sec-2 {
+  --color-fd-primary: var(--sec-2-color);
+}
+
+.blog {
+  --color-fd-primary: var(--blog-color);
+}
+
 html {
   scrollbar-gutter: stable;
 }
