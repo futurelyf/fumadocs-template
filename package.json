@@ -13,7 +13,7 @@
     "@paper-design/shaders-react": "^0.0.81",
     "cn": "^0.3.0",
     "fumadocs-core": "16.15.12",
-    "fumadocs-mdx": "15.4.2",
+    "fumadocs-mdx": "15.4.3",
     "fumadocs-ui": "npm:@fumadocs/base-ui@16.15.12",
     "lucide-react": "^1.47.0",
     "next": "16.3.5",
