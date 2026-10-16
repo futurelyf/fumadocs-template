@@ -1,8 +1,10 @@
 import { llms, loader } from 'fumadocs-core/source';
-import { lucideIconsPlugin } from 'fumadocs-core/source/lucide-icons';
+import { lucideIconsPluginWrapper } from './lucide-plugin-wrapper';
+import { iconifyPlugin } from './iconify-plugin';
 import { docsContentRoute, docsImageRoute, docsRoute } from './shared';
-import { defineDocs } from 'fumadocs-mdx/macro';
+import { defineDocs, defineCollections } from 'fumadocs-mdx/macro';
 import { metaSchema, pageSchema } from 'fumadocs-core/source/schema';
+import { type BlogAuthor, blogPageSchema } from './blog';
 
 const docs = defineDocs({
   dir: 'content/docs',
@@ -17,12 +19,32 @@ const docs = defineDocs({
   },
 });
 
+const blog = defineCollections({
+  type: 'doc',
+  dir: 'content/blog',
+  schema: blogPageSchema,
+});
+
 // See https://fumadocs.dev/docs/headless/source-api for more info
 export const source = loader({
   baseUrl: docsRoute,
   source: docs.toFumadocsSource(),
-  plugins: [lucideIconsPlugin()],
+  plugins: [lucideIconsPluginWrapper(), iconifyPlugin()],
 });
+
+export const blogSource = loader({
+  baseUrl: '/blog',
+  source: blog.toFumadocsSource(),
+});
+
+export const blogAuthors: Record<string, BlogAuthor> = {
+  futurelyf: {
+    name: 'Yifan Liang',
+    title: 'Developer',
+    url: 'https://github.com/futurelyf',
+    image: 'https://avatars.githubusercontent.com/futurelyf',
+  },
+};
 
 export const docsLlms = llms(source, {
   renderPage: async (page) => `# ${page.data.title} (${page.url})
