@@ -231,7 +231,7 @@ function TabIcon({ tab, className }: { tab: LayoutTab; className?: string }) {
   return (
     <span
       className={cn(
-        'flex items-center justify-center shrink-0 size-4 font-medium',
+        'flex items-center justify-center shrink-0 size-8 md:size-4 font-medium',
         !tab.icon && 'rounded bg-fd-muted text-[10px] text-fd-muted-foreground',
         className,
       )}
